@@ -35,7 +35,7 @@ proc encode {obj} {
 
 set version {}
 lappend version version
-lappend version "string \"Tcl v$tcl_patchLevel\""
+lappend version "string \"$tcl_patchLevel\""
 set success {}
 lappend success success
 lappend success "bool true"
@@ -55,10 +55,13 @@ lappend osVersion "string $tcl_platform(osVersion)"
 set platform {}
 lappend platform "tcl_platform(platform)"
 lappend platform "string $tcl_platform(platform)"
+set patchLevel {}
+lappend platform "tcl_patchLevel"
+lappend platform "string $tcl_patchLevel"
 #LATER: byteOrder, pointerSize, wordSize
 #LATER: env
 
-set retval "object {$success $version $message $os $osVersion $platform $machine}"
+set retval "object {$success $version $message $os $osVersion $platform $machine $patchLevel}"
 
 set query_string $env(QUERY_STRING)
 set pairs [split $query_string &]
