@@ -1,4 +1,4 @@
-#!/usr/local/bin/tclsh8.5 
+#!/usr/bin/tclsh
 
 proc redirect {t} {
 	puts "Status: 302 Redirect"
@@ -12,4 +12,4 @@ proc redirect {t} {
 	puts "</html>"
 }
 
-redirect "http://www.regexplanet.com/advanced/tcl/index.html"
+redirect "https://www.regexplanet.com/advanced/tcl/index.html"

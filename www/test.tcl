@@ -1,4 +1,4 @@
-#!/usr/local/bin/tclsh8.5
+#!/usr/bin/tclsh
 
 proc encode {obj} {
 	foreach {type value} $obj {

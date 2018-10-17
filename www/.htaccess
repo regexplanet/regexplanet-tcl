@@ -1,2 +1,0 @@
-AddHandler cgi-script .tcl
-DirectoryIndex index.tcl

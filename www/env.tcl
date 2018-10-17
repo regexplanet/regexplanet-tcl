@@ -1,4 +1,4 @@
-#!/usr/local/bin/tclsh8.5
+#!/usr/bin/tclsh
 puts "Content-Type: text/plain"
 puts ""
 parray env
