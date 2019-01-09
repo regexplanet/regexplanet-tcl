@@ -50,7 +50,7 @@ lappend tech tech
 lappend tech "string \"Tcl $tcl_patchLevel\""
 set timestamp {}
 lappend timestamp timestamp
-lappend timestamp "string \"$tcl_patchLevel\""
+lappend timestamp "string \"[exec date -u +%Y-%m-%dT%H:%M:%SZ]\""
 set version {}
 lappend version version
 lappend version "string \"$tcl_patchLevel\""
