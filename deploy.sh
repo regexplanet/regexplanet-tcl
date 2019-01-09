@@ -7,7 +7,7 @@ set -o errexit
 set -o pipefail
 set -o nounset
 
-now
+now \
     --build-env COMMIT=$(git rev-parse --short HEAD) \
     --build-env LASTMOD=$(date -u +%Y-%m-%dT%H:%M:%SZ) \
 	&& now alias \
