@@ -16,7 +16,9 @@ ENV COMMIT=$COMMIT
 ARG LASTMOD
 ENV LASTMOD=$LASTMOD
 
+ENV PORT=8080
+
 EXPOSE 80
-CMD /usr/sbin/apache2ctl -D FOREGROUND
+CMD sed -i "s/80/$PORT/g" /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf && /usr/sbin/apache2ctl -D FOREGROUND
 
 
