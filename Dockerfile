@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:12
 
 RUN \
   apt-get update && \
@@ -18,7 +18,7 @@ ENV LASTMOD=$LASTMOD
 
 ENV PORT=8080
 
-EXPOSE 80
+EXPOSE 8080
 CMD sed -i "s/80/$PORT/g" /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf && /usr/sbin/apache2ctl -D FOREGROUND
 
 
