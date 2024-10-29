@@ -136,9 +136,6 @@ lappend html "string \"$output\""
 set success {}
 lappend success success
 lappend success "bool true"
-set message {}
-lappend message message
-lappend message "string \"OK\""
 
 set retval "object {$success $html $message}"
 

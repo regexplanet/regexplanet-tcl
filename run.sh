@@ -17,11 +17,11 @@ docker build \
 	.
 
 docker run \
-	--env PORT=4000 \
-	--expose 4000 \
+	--env PORT=5000 \
+	--hostname tcl.regexplanet.com \
 	--interactive \
 	--name "${APP_NAME}" \
-	--publish 4000:4000 \
+	--publish 5000:5000 \
 	--rm \
 	--tty \
 	"${APP_NAME}"

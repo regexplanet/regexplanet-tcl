@@ -1,4 +1,4 @@
-FROM debian:12
+FROM debian:12-slim
 
 RUN \
   apt-get update && \
@@ -16,9 +16,9 @@ ENV COMMIT=$COMMIT
 ARG LASTMOD
 ENV LASTMOD=$LASTMOD
 
-ENV PORT=8080
+ENV PORT=5000
 
-EXPOSE 8080
+EXPOSE 5000
 CMD sed -i "s/80/$PORT/g" /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf && /usr/sbin/apache2ctl -D FOREGROUND
 
 
