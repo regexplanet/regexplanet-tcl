@@ -20,6 +20,7 @@ docker run \
 	--env PORT=5000 \
 	--hostname tcl.regexplanet.com \
 	--interactive \
+	--mount type=bind,source="$(pwd)"/www,target=/var/www \
 	--name "${APP_NAME}" \
 	--publish 5000:5000 \
 	--rm \

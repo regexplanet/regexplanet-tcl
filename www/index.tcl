@@ -5,5 +5,5 @@ set pl $tcl_patchLevel
 
 puts "Content-Type: text/plain" 
 puts ""
-puts "Running Tcl $pl"
+puts "Running tcl $pl"
 

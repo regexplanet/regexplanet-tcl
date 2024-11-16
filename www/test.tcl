@@ -137,7 +137,7 @@ set success {}
 lappend success success
 lappend success "bool true"
 
-set retval "object {$success $html $message}"
+set retval "object {$success $html}"
 
 puts "Access-Control-Allow-Origin: *"
 puts "Access-Control-Allow-Methods: POST, GET"
@@ -149,6 +149,9 @@ if {[info exists callback] == 1 && [string length $callback] != 0} {
 	puts "$callback\([encode $retval]\);"
 } else {
 	puts "Content-Type: text/plain"
+	puts "Access-Control-Allow-Origin: *"
+	puts "Access-Control-Allow-Methods: POST, GET"
+	puts "Access-Control-Max-Age: 604800"
 	puts ""
 	puts [encode $retval]
 }

@@ -82,7 +82,7 @@ foreach pair $pairs {
 		set callback [string range $pair 9 end]
 	}
 }
-if {[info exists callback] == 1} {
+if {[info exists callback] == 1 && [string length $callback] != 0} {
 	puts "Content-Type: text/plain"
 	puts ""
 	puts "$callback\([encode $retval]\);"
